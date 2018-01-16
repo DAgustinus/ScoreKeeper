@@ -1,3 +1,8 @@
+/**
+ * Author: Dan Agustinus
+ * Build Date: January 16, 2018
+ */
+
 package com.example.android.scorekeeper;
 
 import android.support.v7.app.AppCompatActivity;
