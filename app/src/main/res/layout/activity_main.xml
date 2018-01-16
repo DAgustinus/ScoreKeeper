@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/score_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal">
+
+        <!-- Start of Team A Relative Layout -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context="com.example.android.scorekeeper.MainActivity">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Team A"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/scoreTeamA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="0"
+                    android:textSize="56sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timeouts:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/timeout_count_a"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="3"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/touchDown_a"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="touchdown_a"
+                    android:text="Touch Down"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/fieldGOal_a"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="field_goal_a"
+                    android:text="Field Goal"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/safety_a"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="safety_a"
+                    android:text="safety"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/timeout_button_a"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="timeout_a"
+                    android:text="Timeout"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/extraPoint_a"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="195dp"
+                    android:onClick="extra_1_a"
+                    android:text="Extra Point"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/conversion_a"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/extraPoint_a"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="extra_2_a"
+                    android:text="2-pt conversion"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/extra_failed_a"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/conversion_a"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="extra_point_fail_a"
+                    android:text="failed extra pt"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+        <!-- Start of Team B Relative Layout -->
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                tools:context="com.example.android.scorekeeper.MainActivity">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Team B"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/scoreTeamB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:fontFamily="sans-serif-medium"
+                    android:text="0"
+                    android:textSize="56sp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="timeouts:"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/timeout_count_b"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="3"
+                        android:textSize="20sp" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/touchDown_b"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="touchdown_b"
+                    android:text="Touch Down"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/fieldGOal_b"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="field_goal_b"
+                    android:text="Field Goal"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/safety_b"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="safety_b"
+                    android:text="safety"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/timeout_button_b"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:onClick="timeout_b"
+                    android:text="Timeout"
+                    android:visibility="visible" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/extraPoint_b"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="195dp"
+                    android:onClick="extra_1_b"
+                    android:text="Extra Point"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/conversion_b"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/extraPoint_b"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="extra_2_b"
+                    android:text="2-pt conversion"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/extra_failed_b"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/conversion_b"
+                    android:layout_centerHorizontal="true"
+                    android:onClick="extra_point_fail_b"
+                    android:text="failed extra pt"
+                    android:visibility="invisible" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="335dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:solidColor="@android:color/darker_gray" />
+
+    <Button
+        android:id="@+id/reset_all"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="50dp"
+        android:onClick="reset_score"
+        android:text="Reset"
+        android:textSize="15sp" />
+</RelativeLayout>
